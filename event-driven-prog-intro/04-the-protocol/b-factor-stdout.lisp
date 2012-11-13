@@ -5,11 +5,11 @@
 
 (in-package :edp-intro)
 
-(defun echo (data)
-  (write-char data *standard-output*))
+(defun echo (stdout, data)
+  (write-char data stdout))
 
 (defun main ()
   (loop
     (let ((data (read-char *standard-input* nil)))
-      (echo data)
+      (echo *standard-output* data)
       )))
