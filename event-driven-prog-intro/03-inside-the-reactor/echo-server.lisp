@@ -1,5 +1,7 @@
 (defun main ()
   (loop
-    (setq data (read-byte *standard-input* nil))
-    (if (eql data nil)
-        (return))))
+    (let ((data (read-char *standard-input* nil)))
+      (write-char data *standard-output*)
+      ;(if (eq data '#\Newline)
+      ;    (return)))))
+      )))
